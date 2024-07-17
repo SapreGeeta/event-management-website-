@@ -10,7 +10,7 @@ const About = () => {
 
   const fetchReviews = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/v1/review");
+      const res = await axios.get("https://event-management-website-backendurl.onrender.com/api/v1/review");
       setReviews(res.data.data);
     } catch (error) {
       console.error("Failed to fetch reviews:", error);
@@ -26,7 +26,7 @@ const About = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/v1/review",
+        "https://event-management-website-backendurl.onrender.com/api/v1/review",
         { name, message: review },
         { withCredentials: true, headers: { "Content-Type": "application/json" } }
       );
